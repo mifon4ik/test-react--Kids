@@ -1,0 +1,57 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  width: 500px;
+
+  &__col {
+    flex: 1 1 auto;
+    background-color: orangered;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+      content: "";
+      padding-top: 100%;
+      float: left;
+    }
+
+    >img {
+      position: absolute;
+      width: 50px;
+      height: auto;
+    }
+  }
+}
+
+.way_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 300px;
+
+  &__item {
+    width: 50px;
+    height: 50px;
+    background-color: orangered;
+    margin: 5px;
+
+    >img {
+      &.left {
+        transform: rotate(180deg);
+      }
+
+      &.up {
+        transform: rotate(-90deg);
+      }
+
+      &.down {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
